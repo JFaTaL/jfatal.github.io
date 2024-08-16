@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/lastPage.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="heart-1 heart"></div>
+      <div class="heart-2 heart"></div>
+      <div class="heart-3 heart"></div>
+      <div class="heart-4 heart"></div>
+      <div class="heart-5 heart"></div>
+      <div class="heart-6 heart"></div>
+      <div class="heart-7 heart"></div>
+    </main>
+    <div id="thankyou"><b>WOW!? IT WORKED</b></div>
+    <h1>J + A: </h1>
+    <span id="current-date"></span>
+
+    <script>
+        // Get the current date
+        const today = new Date();
+
+        // Format the date as you like
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = today.toLocaleDateString(undefined, options);
+
+        // Display the date in the HTML element with id "current-date"
+        document.getElementById("current-date").textContent = formattedDate;
+    </script>
+    <img src="/components/hello-kitty-lean.gif" alt="cat asking question" class="gif" />
+  </body>
+</html>

@@ -1,0 +1,200 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Courier";
+    background-color: hsl(38, 100%, 95%);
+    color: #ff9494;
+    position: relative;
+    overflow: hidden;
+}
+
+#thankyou {
+    font-size: 8vw;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5vw;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#current-date {
+    font-size: 5vw;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rizz {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 4vw;
+}
+
+.date {
+    text-align: center;
+    margin-right: 0;
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    font-size: 3.5vw;
+}
+
+/* Media query to make "J + A:" and the date appear on different lines */
+@media only screen and (max-width: 600px) {
+    .date {
+        font-size: 5vw; /* Adjust font size for smaller screens */
+        display: block;
+        text-align: center;
+    }
+
+    .date span {
+        display: block; /* Make each span (J + A: and date) take up a full line */
+    }
+}
+
+.heart-1 {
+    left: -70%;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+  
+.heart-2 {
+    left: -50%;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+  
+.heart-3 {
+    left: -25%;
+    animation-duration: 2.3s;
+    animation-iteration-count: infinite;
+}
+  
+.heart-4 {
+    left: 0%;
+    animation-duration: 2.9s;
+    animation-iteration-count: infinite;
+}
+  
+.heart-5 {
+    left: 25%;
+    animation-duration: 2.6s;
+    animation-iteration-count: infinite;
+}
+  
+.heart-6 {
+    left: 55%;
+    animation-duration: 2.4s;
+    animation-iteration-count: infinite;
+}
+  
+.heart-7 {
+    left: 65%;
+    animation-duration: 2.7s;
+    animation-iteration-count: infinite;
+}
+  
+.heart {
+    position: absolute;
+    display: inline-block;
+    background-color: #fb6060;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: drop;
+    animation-timing-function: ease-in;
+}
+
+.heart::after, .heart::before {
+    content: "";
+    background-color: #fb6060;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+.heart::after {
+    top: 0px;
+    left: 25px;
+}
+
+.heart::before {
+    top: -25px;
+    left: 0px;
+}
+
+@keyframes drop {
+    0% {
+        top: -55px;
+    }
+    100% {
+        top: 900px;
+        opacity: 0.2;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    body {
+        padding: 20px;
+    }
+
+    #thankyou {
+        font-size: 6vw;
+    }
+
+    .rizz {
+        font-size: 5vw;
+    }
+
+    .date {
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #thankyou {
+        font-size: 8vw;
+    }
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    #current-date {
+        font-size: 7vw;
+    }
+
+    .rizz {
+        font-size: 6vw;
+    }
+
+    .date {
+        font-size: 5vw;
+    }
+
+    .heart {
+        height: 25px;
+        width: 25px;
+    }
+
+    .heart::after {
+        width: 25px;
+        height: 25px;
+        left: 12.5px;
+    }
+
+    .heart::before {
+        width: 25px;
+        height: 25px;
+        top: -12.5px;
+    }
+}

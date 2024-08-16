@@ -1,0 +1,126 @@
+body {
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Courier";
+  background-color: #fff5e4;
+  color: #fb6060;
+  padding: 20px; /* Add padding for better spacing on smaller screens */
+}
+
+img {
+  height: 300px;
+  width: auto;
+  padding: 10px;
+  max-width: 100%; /* Ensure image is responsive */
+}
+
+#valentineQuestion {
+  font-size: 8vw; /* Use relative font size for better scaling */
+  margin-bottom: 10px;
+}
+
+.answerButton {
+  padding: 10px 20px;
+  font-size: 5vw; /* Use relative font size for better scaling */
+  cursor: pointer;
+  margin: 10px;
+  background-color: #ffe3e1;
+  color: #fb6060;
+  border-radius: 12px;
+  border: 2px solid #ffe3e1;
+  box-shadow: 1px 1px 2px #ff9494;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.answerButton:hover {
+  background-color: #ff9494;
+  color: #ffe3e1;
+  border: 2px solid #ff9494;
+  box-shadow: 1px 1px 2px #ffe3e1;
+}
+
+.heart {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  overflow: visible;
+  max-width: 90%; /* Make the SVG responsive */
+  height: auto;
+}
+
+svg path#line {
+  fill: none;
+  stroke: #e00000;
+  stroke-width: 2;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+  stroke-miterlimit: 4;
+  stroke-opacity: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 4s linear infinite;
+}
+
+svg path#heart {
+  transform-origin: 50% 50%;
+  animation: blink 4s linear infinite;
+}
+
+@keyframes dash {
+  0% {
+      stroke-dashoffset: 1;
+  }
+  80% {
+      stroke-dashoffset: 0;
+  }
+  100% {
+      stroke-dashoffset: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+      opacity: 0;
+      transform: scale(0);
+  }
+  60% {
+      opacity: 0;
+      transform: scale(0);
+  }
+  70% {
+      opacity: 1;
+      transform: scale(1.2);
+  }
+  75% {
+      opacity: 1;
+      transform: scale(1.0);
+  }
+  80% {
+      opacity: 1;
+      transform: scale(1.2);
+  }
+  85% {
+      opacity: 1;
+      transform: scale(1.0);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(1.0);
+  }
+}
+
+/* Media query for larger screens */
+@media (min-width: 769px) {
+  #valentineQuestion {
+      font-size: 50px; /* Adjust font size for larger screens */
+  }
+
+  .answerButton {
+      font-size: 18px; /* Adjust button size for larger screens */
+  }
+}
